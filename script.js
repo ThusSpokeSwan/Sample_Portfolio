@@ -11,6 +11,13 @@ hamburger.addEventListener("click", () => {
   }
 });
 
+//Auto close menu when a link is clicked
+document.querySelectorAll("#menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.style.display = "none";
+  });
+});
+
 // Open-source carousel
 const projectsInner = document.querySelector(".projects-inner");
 const dots = document.querySelectorAll(".dot");
