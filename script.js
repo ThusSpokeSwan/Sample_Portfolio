@@ -14,7 +14,9 @@ hamburger.addEventListener("click", () => {
 //Auto close menu when a link is clicked
 document.querySelectorAll("#menu a").forEach((link) => {
   link.addEventListener("click", () => {
-    menu.style.display = "none";
+    // Only hide the menu if we are on mobile-sized screen
+    if (window.innerWidth < 768) {
+    menu.style.display = "none";}
   });
 });
 
